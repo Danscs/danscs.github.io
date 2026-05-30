@@ -1,19 +1,36 @@
-let specifics = document.querySelectorAll(".NaviButton");
+let hoveraudio = "/assets/audio/piko.mp3";
+  let NaviButtons = document.querySelectorAll("a");
+  var clicksound = document.getElementById("click-sound");
+  var avatarsound =document.getElementById("avatar-sound");
+  var danscsound =document.getElementById("dansc-sound");
 
-let hoveraudioogg = "assets/audio/piko.mp3";
-
-for(i = 0; i < specifics.length; i++){
-	let specific = specifics[i];
-  
+for(i = 0; i < NaviButtons.length; i++){
+	let NaviButton = NaviButtons[i];
   let audio = document.createElement("audio");
-  audio.src = hoveraudioogg;
+  audio.src = hoveraudio;
   document.body.appendChild(audio);
 
-  specific.onmouseover = () => {
+  NaviButton.onmouseover = () => {
     audio.play();
   }
-  specific.onmouseout = () => {
+  NaviButton.onmouseout = () => {
     audio.pause();
     audio.currentTime = 0;
   }
+    NaviButton.onclick = () => {
+    clicksound.play();
+  }
+
 }
+  let avatar = document.getElementById("intropic");
+    avatar.onmouseover= () => {
+    avatarsound.play();
+  }
+    let dansc = document.getElementById("bichito");
+    danscsound.loop = true;
+    dansc.onmouseover= () => {
+    danscsound.play();
+  }
+        dansc.onmouseout= () => {
+    danscsound.pause();
+  }
