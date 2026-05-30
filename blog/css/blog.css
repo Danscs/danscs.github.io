@@ -1,0 +1,139 @@
+@font-face {
+    font-family: "Melanin";
+    src: url(/assets/fonts/Melanin.otf);
+    font-weight: normal;
+    font-style: normal; 
+}
+
+body{
+      /*========VARIABLES=======*/
+  /*color palette*/
+  --dark: #004739;
+  --darker: #1e2235;
+  --pop: rgb(186, 233, 133);
+  --hyperpop:rgb(239, 255, 247);
+  --secondary:rgb(236, 242, 247);
+  --basic:rgb(78, 141, 97);
+  /*cursors*/
+  --cursornormal: url(/assets/cursors/Sunflower.cur);
+  --cursorpointer: url(/assets/cursors/Cosmos.cur);
+  /* BACKGROUND*/
+  --BGimg: url(../assets/2_grass_tile.png);
+    background-attachment: fixed;
+  /*fonts*/
+  --header-font: 'Melanin';
+  --secondary-font: 'Courier New', monospace;
+  --general-font: 'Times new Roman' monospace;
+  /* properties*/
+  font-family: var(--general-font);
+  background-image: var(--BGimg);
+  background-color: var(--darker);
+  cursor: var(--cursornormal), auto;
+
+  font-size: 1em;
+}
+
+h1{ font-size: 2.3em; color:var(--dark);   text-transform: none;}
+h2{ font-size: 1.5em;  color:var(--pop);  text-shadow: -2px -1px 0 var(--dark), -2px 0px 0 var(--dark), -2px 1px 0 var(--dark), -1px -2px 0 var(--dark), -1px -1px 0 var(--dark), -1px 0px 0 var(--dark), -1px 1px 0 var(--dark), -1px 2px 0 var(--dark), 0px -2px 0 var(--dark), 0px -1px 0 var(--dark), 0px 0px 0 var(--dark), 0px 1px 0 var(--dark), 0px 2px 0 var(--dark), 1px -2px 0 var(--dark), 1px -1px 0 var(--dark), 1px 0px 0 var(--dark), 1px 1px 0 var(--dark), 1px 2px 0 var(--dark), 2px -1px 0 var(--dark), 2px 0px 0 var(--dark)}
+h3{ text-transform: none; font-size: 1.2em;color:var(--pop);  text-shadow: -2px -1px 0 var(--dark), -2px 0px 0 var(--dark), -2px 1px 0 var(--dark), -1px -2px 0 var(--dark), -1px -1px 0 var(--dark), -1px 0px 0 var(--dark), -1px 1px 0 var(--dark), -1px 2px 0 var(--dark), 0px -2px 0 var(--dark), 0px -1px 0 var(--dark), 0px 0px 0 var(--dark), 0px 1px 0 var(--dark), 0px 2px 0 var(--dark), 1px -2px 0 var(--dark), 1px -1px 0 var(--dark), 1px 0px 0 var(--dark), 1px 1px 0 var(--dark), 1px 2px 0 var(--dark), 2px -1px 0 var(--dark), 2px 0px 0 var(--dark)}
+h4{ font-size: 1.3em; margin: 0;}
+h5{font-size: 1.2em; color:var(--dark);}
+b{ text-shadow: none ;}
+
+#container{
+    max-width:1600px;
+    position: relative;
+
+}
+.NaviButton{
+  font-family: 'Atari ST';
+  font-size: 2em;
+}
+#main{
+flex:2;
+}
+#left{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10%;
+}
+/* TABLA*/
+
+.blog_menu{
+ width:100%;
+ border-collapse: collapse;
+ text-align: center;
+ font-family: var(--secondary-font);
+}
+
+.blog_menu th{
+  text-transform: uppercase;
+  color:var(--dark);
+}
+
+.blog_menu tbody tr{
+   border-top:2px solid var(--basic);
+   border-top-style: dotted;
+
+
+}
+.menu_titulo{
+    font-weight: bold;
+  }
+
+.blog_menu td{
+  padding:0.2em;
+}
+/* contenido */
+.blog_post{
+  margin:1em;
+  border-bottom: 3px solid var(--basic);
+  border-bottom-style:dotted ;
+}
+.blog_post img{
+  max-width: 100%;
+  object-fit: contain;
+}
+.blog_header{
+padding-left:3em;
+display:flex;
+gap:10px;
+justify-content: space-between;
+align-items: flex-end;
+}
+.blog_header h1,h3{
+  display:inline
+}
+.blog_content{
+  padding:0 2em;
+  line-height: 1.2;
+
+}
+.blog_content p{
+  font-size: 1.1em;
+}
+.centertext{
+  text-align: center;
+}
+
+@media (max-width: 600px){
+  .blog_post{
+    margin:0.5em;
+}
+.blog_content{
+  padding: 0.5em;
+}
+.blog_header{
+  padding-left: 0.5em;
+  flex-direction: column;
+}
+
+}
+
+@media (max-width: 900px){
+#left{
+  position:static;
+  top: 0;
+}
+
+}

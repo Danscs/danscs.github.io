@@ -1,0 +1,42 @@
+body{
+    color: var(--dark);
+}
+h1{ font-size: 4em;  text-shadow: -2px -1px 0 var(--dark), -2px 0px 0 var(--dark), -2px 1px 0 var(--dark), -1px -2px 0 var(--dark), -1px -1px 0 var(--dark), -1px 0px 0 var(--dark), -1px 1px 0 var(--dark), -1px 2px 0 var(--dark), 0px -2px 0 var(--dark), 0px -1px 0 var(--dark), 0px 0px 0 var(--dark), 0px 1px 0 var(--dark), 0px 2px 0 var(--dark), 1px -2px 0 var(--dark), 1px -1px 0 var(--dark), 1px 0px 0 var(--dark), 1px 1px 0 var(--dark), 1px 2px 0 var(--dark), 2px -1px 0 var(--dark), 2px 0px 0 var(--dark), 2px 1px 0 var(--dark), 1px 5px 3px #2b3d54;
+  z-index: 1000; }
+h2{ font-size: 2em; text-shadow: -2px -1px 0 var(--dark), -2px 0px 0 var(--dark), -2px 1px 0 var(--dark), -1px -2px 0 var(--dark), -1px -1px 0 var(--dark), -1px 0px 0 var(--dark), -1px 1px 0 var(--dark), -1px 2px 0 var(--dark), 0px -2px 0 var(--dark), 0px -1px 0 var(--dark), 0px 0px 0 var(--dark), 0px 1px 0 var(--dark), 0px 2px 0 var(--dark), 1px -2px 0 var(--dark), 1px -1px 0 var(--dark), 1px 0px 0 var(--dark), 1px 1px 0 var(--dark), 1px 2px 0 var(--dark), 2px -1px 0 var(--dark), 2px 0px 0 var(--dark), 2px 1px 0 #004739, 1px 5px 3px #2b3d54;}
+h3{ font-size: 2em;   text-shadow: 1px 1px 3px var(--basic);  }
+h4{ font-size: 1.5em;}
+h5{ font-size: 1.3em;  text-shadow: 1px 1px 3px var(--basic);}
+
+#container{
+    max-width:1300px;
+
+}
+.NaviButton{
+    font-size: 30px;
+}
+
+#Main{
+flex:4;
+}
+.box{
+    height:100%;
+    background: rgba(236, 242, 247, 0.85);
+    color: var(--darker);
+    font-weight: bold;
+
+}
+.subtitle-box{
+  margin-left:0;
+  margin-right:auto;
+  padding: 0px 20px;
+  width: 80%;
+  border-radius: 0px 50px 50px 0px;
+  background-image: linear-gradient(to bottom, 
+  var(--secondary) 10%, rgba(106, 121, 131, 0.3) 50%, var(--hyperpop) 100%);
+  text-align: left;
+}
+.contentbox{
+    text-align: start;
+    
+}

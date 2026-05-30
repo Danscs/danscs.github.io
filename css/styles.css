@@ -1,0 +1,389 @@
+@font-face {
+    font-family: "Atari ST";
+    src: url(/assets/fonts/AtariST8x16SystemFont.woff);
+    font-weight: normal;
+    font-style: normal; 
+}
+@font-face {
+    font-family: "PineWords";
+    src: url(/assets/fonts/PineWords-xRZZR.ttf);
+    font-weight: normal;
+    font-style: normal; 
+}
+@font-face {
+    font-family: "JoesBurger";
+    src: url(/assets/fonts/JoesBurger-mLE3a.ttf);
+    font-weight: normal;
+    font-style: normal; 
+}
+body{
+  /*========VARIABLES=======*/
+  /*color palette*/
+  --dark: #004739;
+  --darker: #1e2235;
+  --pop: rgb(186, 233, 133);
+  --hyperpop:rgb(239, 255, 247);
+  --secondary:rgb(236, 242, 247);
+  --basic:rgb(78, 141, 97);
+  /*cursors*/
+  --cursornormal: url(/assets/cursors/MAINcursor.cur);
+  --cursorpointer: url(/assets/cursors/pointercursor.cur);
+  /* BACKGROUND*/
+  --BGimg: url(/assets/common/backgroundtiles.png);
+    background-attachment: fixed;
+  /*fonts*/
+    --header-font: 'Atari ST';
+  --secondary-font: none;
+  --general-font: 'Courier New', monospace;
+  /* properties*/
+  font-family: var(--general-font);
+  background-image: var(--BGimg);
+  background-color: var(--darker);
+  cursor: var(--cursornormal), auto;
+
+  font-size: 1em;
+}
+
+img {
+
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+/*LINKS*/
+a {
+  color:inherit;
+  cursor: var(--cursorpointer), auto;
+  text-decoration: none;
+}
+
+a:hover{
+text-decoration: underline;
+text-decoration-color: currentColor;
+
+}
+/*=========== text styling*/
+
+h1, h2,h3{
+  font-family: var(--header-font);
+  margin: 0;
+}
+h1 {
+  text-transform: uppercase;
+  color:var(--hyperpop);
+ 
+}
+h2{
+  font-weight: normal;
+  color: var(--hyperpop);
+
+}
+ h3{
+
+  font-weight: normal;
+  font-family: var(--header-font); 
+  text-transform: uppercase;
+  color:var(--darker);
+
+ }
+
+h4{
+  margin:0;
+  color: var(--darker)
+}
+h5{
+  margin:0.5em;
+  color: var(--dark);
+
+}
+
+b{
+  color: var(--dark);
+  font-weight:bold;
+  text-shadow: -1px 0px 0 var(--pop), 0px -1px 0 var(--pop), 0px 0px 0 var(--pop), 0px 1px 0 var(--pop), 1px 0px 0 var(--pop);
+}
+mark {
+  color:inherit;
+  background-color: rgb(from var(--pop) r g b / 0.5 );
+}
+/*====== text styling end*/
+/*== BUTTONS==========*/
+button{
+  cursor: var(--cursorpointer), auto;
+}
+/*Navigation button(slideimage)*/
+.NaviButton {
+
+  font-family: var(--header-font); 
+  text-transform: uppercase;
+  width:181px;
+  height:49px;
+  text-align: center;
+  color: var(--darker);
+  text-shadow: -1px 0px 0 var(--pop), 0px -1px 0 var(--pop), 0px 0px 0 var(--pop), 0px 1px 0 var(--pop), 1px 0px 0 var(--pop);
+  background: rgba(186, 233, 133, 0.7);
+  transition: all 500ms;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid var(--pop);
+  --backimage: none;
+}
+
+.NaviButton:hover {
+  text-shadow: none;
+  color: rgba(41, 192, 159, 0);
+  transform: scale(1.1);
+  outline: 2px solid var(--darker);
+}
+
+
+.NaviButton::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-image: var(--backimage);
+  background-repeat: no-repeat;
+  background-color: var(--pop);
+  z-index: -1;
+  transition: width 700ms;
+}
+
+.NaviButton:hover::before {
+  width: 250%;
+}
+/* pencil buttons*/
+.buttons-box{
+  display:inline-flex;
+
+overflow: hidden;
+
+}
+
+.pencilButton{
+  display: inline-flex;
+
+
+  align-items: center;
+  padding:0px 25px;
+
+  --IMGmove: 30px;
+  font-family: var(--secondary-font), var(--header-font);
+
+
+  transition: 0.4s ease-in-out;
+    color: var(--hyperpop);
+    font-size: 1.6em;
+
+}
+.pencilButton img{
+  transition: 0.4s ease-in-out;
+
+        translate: 0 var(--IMGmove);
+
+}
+.pencilButton:hover{
+  text-decoration: none;
+  --IMGmove: 0;
+  text-shadow:var(--dark) 0px 0px 5px, var(--dark) 0px 0px 10px, var(--pop) 0px 0px 20px, var(--pop) 0px 0px 30px, var(--pop) 0px 0px 40px, -8px -4px 7px var(--basic);
+}
+
+/*-----gallery buttons-------*/
+.gallerybutton{
+  display:flex;
+  justify-content: center;
+  align-items: flex-end;
+  width:150px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: top center;
+    background-size: 100%;
+
+
+}
+#ilustracion{
+  background-image: url(/gallery/assets/images/gallery-illust.png);
+}
+#ilustracion:hover{
+
+  background-image: url(/gallery/assets/images/gallery-illust2.png);
+}
+#sketch{
+  background-image: url(/gallery/assets/images/gallery-sketch.png);
+  filter: grayscale();
+  opacity: 0.5;
+}
+#sketch:hover{
+  background-image: url(/gallery/assets/images/gallery-sketch2.png);
+
+}
+#foto{
+  background-image: url(/gallery/assets/images/gallery-photo.png);
+    filter: grayscale();
+  opacity: 0.5;
+}
+#foto:hover{
+  background-image: url(/gallery/assets/images/gallery-photo2.png);
+
+}
+#journal{
+  background-image: url(/gallery/assets/images/gallery-scrpbook.png);
+    filter: grayscale();
+  opacity: 0.5;
+}
+#journal:hover{
+  background-image: url(/gallery/assets/images/gallery-scrpbook2.png);
+
+}
+
+
+
+/*== end BUTTONS====*/
+
+/*======BOXES=====*/
+/*Main deisgn*/
+.box{
+  border: 2px solid var(--darker);
+  border-radius: 1em 1em 0.5em 0.5em;
+  overflow: hidden;
+  position:relative;
+  margin-bottom:10px;
+  padding-bottom: 5px;
+  background: linear-gradient(0deg,rgba(236, 242, 247, 0.90) 60%, rgba(240, 255, 250, 0.5) 100%);
+  box-shadow: 0 4px 10px rgba(28, 2, 43, 0.7);
+}
+.title-box{
+  background-image: linear-gradient(to bottom, 
+   var(--pop) 0%, var(--hyperpop) 10%,var(--pop) 12%,var(--basic) 90%, var(--dark) 99%,var(--darker) 100%);
+  text-align: center;
+
+}
+
+.subtitle-box{
+  margin-left:auto;
+  margin-right:0;
+  padding: 0px 20px;
+  width: 80%;
+  border-radius: 50px 0px 0px 50px;
+  background-image: linear-gradient(to bottom, 
+  var(--secondary) 10%, rgba(106, 121, 131, 0.3) 50%, var(--hyperpop) 100%);
+  text-align: left;
+}
+
+/*Cajas papeleria*/
+.notebook-box{
+  border-radius: 10px;
+  border: 30px ;
+  border-style: solid;
+  border-image: url(/assets/common/notebookborder.png) 30 fill round;
+  outline: 10px groove var(--basic);
+  box-shadow: -10px 10px 5px 1px #140e1d;
+}
+.paper-box{
+  border: 30px ;
+  border-style: solid;
+  border-image: url(/assets/common/paperborder.png) 30 fill round;
+  filter: drop-shadow(0px 5px 3px rgba(1, 5, 41, 0.4));
+
+}
+
+.polaroid-box{
+  display:inline-block;
+  position: relative;
+   margin-bottom: 10px;
+}
+
+.polaroid{
+  background-color: rgb(225, 230, 233);;
+  text-align: center;
+  padding: 12px;
+  box-shadow: 2px 2px 7px -3px var(--darker);
+  border-top: 2px solid white;
+  border-left: 1px solid rgb(177, 197, 221);
+  border-right: 1px solid rgb(177, 197, 221);
+  border-bottom: 2px solid rgb(72, 87, 105);
+  border-radius: 4px;
+
+}
+.polaroid img{
+  width:100%;
+  background-color: gray;
+  border: 3px;
+  border-style: inset;
+  
+  
+}
+
+/* ====== contents*/
+
+.contentbox{
+  overflow-y:auto;
+  padding: clamp(5px, 3%, 20px);
+  padding-top:5px;
+  padding-bottom:5px;
+  text-align: center;
+  
+}
+.contentbox .contentbox{
+  overflow: hidden;
+  padding:0;
+}
+.contentbox img{
+  max-height: 300px;
+  max-width: 100%;
+}
+/*========END-BOXES==========*/
+/*========LISTS=========*/
+.biglist{
+  font-family: var(--header-font);
+  font-size: 1.4em;
+  text-transform: uppercase;
+  color: var(--dark);
+  text-shadow: -1px 0px 0 var(--pop), 0px -1px 0 var(--pop), 0px 0px 0 var(--pop), 0px 1px 0 var(--pop), 1px 0px 0 var(--pop);
+  margin: 0;
+  line-height: 1.3;
+  text-align: start;
+  /*============List image variables======*/
+  --listIMG: none;
+  list-style-image: var(--listIMG);
+}
+.biglist a:hover{
+  font-size: 115%;
+  transition: all 300ms;
+}
+
+.MediumList{
+  column-count: 3;
+  column-width: auto;
+  column-gap: 2em;
+  --listIMG: none;
+  list-style-image: var(--listIMG);
+}
+.fav{
+ list-style-image: url(/assets/common/list-star.gif);
+ font-weight: bolder;
+ color:var(--dark);
+}
+
+.games{
+ list-style-image: url(/assets/common/list-game.gif);
+}
+
+.tv{
+ list-style-image: url(/assets/common/list-tv.gif);
+}
+
+.books{
+  list-style-image: url(/assets/common/list-book.gif);
+}
+
+.film{
+  list-style-image: url(/assets/common/list-film.gif);
+}
+
+/* DIVIDERS*/
